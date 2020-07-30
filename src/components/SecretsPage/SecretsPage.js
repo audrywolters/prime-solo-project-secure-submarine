@@ -12,8 +12,8 @@ class SecretsPage extends Component {
         <p>Currently logged in as <b>{this.props.user.username}</b></p>
         <p>Clearance level: <b>{this.props.user.clearance_level}</b></p>
         <ul>
-          {this.props.secrets.map(secret => (
-            <li>
+          {this.props.secrets.map(( secret, index) => (
+            <li key={index}>
               Clearance: {secret.secrecy_level} | Content: {secret.content}
             </li>
           ))}
